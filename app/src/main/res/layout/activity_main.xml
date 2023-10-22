@@ -97,7 +97,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_margin="5dp"
-                        android:backgroundTint="#FF5722"
+                        android:backgroundTint="#673AB7"
                         app:cornerRadius="4dp" />
                     <TextView
                         android:id="@+id/num_of_cubes_auton"
@@ -339,7 +339,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_margin="5dp"
-                        android:backgroundTint="#FF5722"
+                        android:backgroundTint="#673AB7"
                         app:cornerRadius="4dp" />
                     <TextView
                         android:id="@+id/num_of_cubes_teliop"
