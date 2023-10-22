@@ -39,6 +39,18 @@
             android:textSize="20sp" />
     </LinearLayout>
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:text="Team#:"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
@@ -127,7 +139,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
                         android:text="0"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="10sp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -143,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
                         android:text="0"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="10sp" />
 
 
@@ -369,7 +381,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
                         android:text="0"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="10sp" />
 
                     <Button
@@ -385,7 +397,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="3dp"
                         android:text="0"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="10sp" />
 
                 </LinearLayout>
