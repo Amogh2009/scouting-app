@@ -726,5 +726,16 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Submit" />
+    </LinearLayout>
+
 </LinearLayout>
 </ScrollView>
