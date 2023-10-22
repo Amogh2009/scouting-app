@@ -212,8 +212,7 @@
                         android:textSize="11sp"
                         app:cornerRadius="32dp" />
                 </LinearLayout>
-
-                <!-- github test -->
+                
 
             </LinearLayout>
 
