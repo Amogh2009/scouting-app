@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:text="Pickup location"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -249,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:text="# Of Links:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="11sp" />
 
                 <TextView
@@ -305,7 +305,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="3dp"
                     android:text="Pickup location"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -490,7 +490,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:text="# Of Links:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="11sp" />
 
                 <TextView
