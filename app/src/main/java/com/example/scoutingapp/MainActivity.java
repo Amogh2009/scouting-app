@@ -1,14 +1,19 @@
 package com.example.scoutingapp;
 
+import android.annotation.SuppressLint;
 import android.os.CountDownTimer;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
 import java.util.Locale;
 import com.google.android.material.button.MaterialButton;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    TextView textView;
+    EditText inputText;
     private static final long START_TIME_IN_MILLIS = 600000;
 
 
@@ -49,10 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
 
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textView = (TextView) findViewById(R.id.textView);
+        inputText=(EditText) findViewById(R.id.inputText);
+
         num_of_links_auton = findViewById(R.id.num_of_links_auton);
         num_of_links_teliop = findViewById(R.id.num_of_links_teliop);
         num_of_cubes_auton = findViewById(R.id.num_of_cubes_auton);
@@ -89,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
+
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
