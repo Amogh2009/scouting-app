@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String teliop_coneplacement = "cones scored in high(auton), cones scored in middle(auton), cones scored in low(auton)";
     String teliop_cubeplacement = "cubes scored in high(auton), cubes scored in middle(auton), cubes scored in low(auton)";
     String teliop_fails = "cone fails(teliop), cube fails(teliop)";
-    String quantitative = auton_pickup + auton_coneplacement+auton_cubeplacement+teliop_pickup+teliop_coneplacement+teliop_cubeplacement+auton_fails+teliop_fails;
+    String quantitative = auton_pickup + auton_coneplacement + auton_cubeplacement + teliop_pickup + teliop_coneplacement + teliop_cubeplacement + auton_fails + teliop_fails;
 
     String observational = "Time taken to balance, successful balance, strength, speed, maneuvering";
-        String data_sent_to_sheet = titles + quantitative + observational;
+    String data_sent_to_sheet = titles + quantitative + observational;
 
     TextView num_of_cubes_auton, num_of_cones_auton, num_of_cubes_teliop, num_of_cones_teliop;
     TextView num_of_links_auton, num_of_links_teliop;
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton cone_auton, cube_auton, highgoal_auton, middlegoal_auton, lowgoal_auton, cone_teliop, cube_teliop, highgoal_teliop, middlegoal_teliop, lowgoal_teliop;
     MaterialButton fail_auton, score_auton, undo_auton, fail_teliop, score_teliop, undo_teliop;
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
-
 
 
     @Override
@@ -112,8 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         updateCountDownText();
     }
 
-}
-
     void assignId(MaterialButton btn, int id) {
         btn = findViewById(id);
         btn.setOnClickListener(this);
@@ -163,10 +160,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mTextViewCountDown.setText(timeLeftFormatted);
     }
-}
 
     @Override
     public void onClick(View view) {
+
         MaterialButton button = (MaterialButton) view;
         String buttonText = button.getText().toString();
         //pickup location
