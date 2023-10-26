@@ -11,6 +11,7 @@ import com.google.android.material.button.MaterialButton;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final long START_TIME_IN_MILLIS = 600000;
 
+
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int middlegoalconesteliop;
     int lowgoalcubesauton;
     int lowgoalconesteliop;
+
     String titles = "name, match# team#, red/blue";
     String auton_pickup = "#ground pickup(auton), #1st pickup(auton),#2nd pickup(auton)";
     String auton_coneplacement = "cones scored in high(auton), cones scored in middle(auton), cones scored in low(auton)";
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(id);
         btn.setOnClickListener(this);
     }
+
     private void startTimer() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
@@ -161,30 +164,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTextViewCountDown.setText(timeLeftFormatted);
     }
 }
+
     @Override
     public void onClick(View view) {
         MaterialButton button = (MaterialButton) view;
         String buttonText = button.getText().toString();
         //pickup location
         switch (view.getId()){
-            case 1: /*ground pickup auton*/
+            case 1000022: /*ground pickup auton*/
 
                 break;
-            case 2: /*1st pickup auton*/
+            case 1000006: /*1st pickup auton*/
 
                 break;
-            case 3: /*2nd pickup auton*/
+            case 1000017: /*2nd pickup auton*/
 
                 break;
-            case 4: /*ground pickup teliop*/
+            case 1000024: /*ground pickup teliop*/
 
                 break;
-            case 5: /*1st pickup teliop*/
+            case 1000036: /*1st pickup teliop*/
 
                 break;
-            case 6: /*2nd pickup teliop*/
+            case 1000005: /*2nd pickup teliop*/
 
                 break;
+        }
+        //cone or cube
+        switch (view.getId()){
+            case 1000032: /*cube_auton*/
+
+                break;
+            case 1000008: /*cone_auton*/
+
+                break;
+            case 1000034: /*cube_teliop*/
+
+                break;
+            case 1000000: /*cone_,teliop*/
+
+                break;
+
         }
         //cone placement location
         switch (view.getId()){

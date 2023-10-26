@@ -12,8 +12,7 @@
     android:orientation="vertical"
     android:background="@color/almostBlack"
     tools:ignore="HardcodedText"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
