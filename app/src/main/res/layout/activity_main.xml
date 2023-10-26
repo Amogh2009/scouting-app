@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -754,42 +755,23 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        style="@style/buttonRow">
 
-        <TextView
-            style="@style/buttonNumber"
-            android:text="Reach"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            />
-        <Button
-            style="@style/buttonNumber"
-            android:gravity="center"
-            android:text="1"/>
-        <Button
-            style="@style/buttonNumber"
-            android:gravity="center"
-            android:text="2"/>
-        <Button
-            style="@style/buttonNumber"
-            android:gravity="center"
-            android:text="3"/>
-        <Button
-            style="@style/buttonNumber"
-            android:gravity="center"
-            android:text="4"/>
-        <Button
-            style="@style/buttonNumber"
-            android:gravity="center"
-            android:text="5"/>
 
-    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:padding="20dp">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         style="@style/buttonRow">
 
         <Button
+            android:id="@+id/submit"
             style="@style/buttonNumber"
             android:layout_width="30dp"
             android:layout_height="match_parent"
@@ -799,3 +781,4 @@
 
 </LinearLayout>
 </ScrollView>
+</layout>

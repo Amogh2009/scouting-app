@@ -5,27 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
+import com.android.volley.toolbox.StringRequest;
+import com.google.android.material.button.MaterialButton;
 import android.widget.Button;
 import java.util.Locale;
-import com.google.android.material.button.MaterialButton;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final long START_TIME_IN_MILLIS = 600000;
-
-
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
     private Button mButtonReset;
     private CountDownTimer mCountDownTimer;
-
     private boolean mTimerRunning;
-
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
-    int highgoalcubesauton;
-    int highgoalconesteliop;
-    int middlehgoalcubesauton;
-    int middlegoalconesteliop;
-    int lowgoalcubesauton;
-    int lowgoalconesteliop;
 
     String titles = "name, match# team#, red/blue";
     String auton_pickup = "#ground pickup(auton), #1st pickup(auton),#2nd pickup(auton)";
@@ -37,17 +34,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String teliop_cubeplacement = "cubes scored in high(auton), cubes scored in middle(auton), cubes scored in low(auton)";
     String teliop_fails = "cone fails(teliop), cube fails(teliop)";
     String quantitative = auton_pickup + auton_coneplacement + auton_cubeplacement + teliop_pickup + teliop_coneplacement + teliop_cubeplacement + auton_fails + teliop_fails;
-
     String observational = "Time taken to balance, successful balance, strength, speed, maneuvering";
     String data_sent_to_sheet = titles + quantitative + observational;
-
     TextView num_of_cubes_auton, num_of_cones_auton, num_of_cubes_teliop, num_of_cones_teliop;
     TextView num_of_links_auton, num_of_links_teliop;
     MaterialButton first_pickup_auton, second_pickup_auton, ground_pickup_auton, first_pickup_teliop, second_pickup_teliop, ground_pickup_teliop;
     MaterialButton cone_auton, cube_auton, highgoal_auton, middlegoal_auton, lowgoal_auton, cone_teliop, cube_teliop, highgoal_teliop, middlegoal_teliop, lowgoal_teliop;
     MaterialButton fail_auton, score_auton, undo_auton, fail_teliop, score_teliop, undo_teliop;
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
-
+    MaterialButton submit;
+    /*
+    int numofconesauton = 1;
+    int numofcubessauton = 1;
+    int numofconesteliop = 1;
+    int numofcubesstelop = 1;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +90,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
+        // code below for submitting data to google sheet
+        assignId(submit, R.id.submit);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = "amogh";
+                int matchnumber = 76;
+                int teamnumber = 7390;
+
+                saveData(name, matchnumber, teamnumber);
+            }
+        });
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +123,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         updateCountDownText();
+    }
+    private void saveData(String name, int matchnumber, int teamnumber) {
+        String url = "https://script.google.com/macros/s/AKfycbzwr9CcQPnwj84vYsYY63ilWmazQ4v6qWwSJHU5ssWqZf6X89Su1C1wB-2hn3dUTKg/exec";
+        url = url+"action=create&name="+name+"&matchnumber="+matchnumber+"&teamnumber="+teamnumber;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(stringRequest);
     }
 
     void assignId(MaterialButton btn, int id) {
@@ -268,4 +301,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         num_of_links_auton.setText("1");
     }
+    
 }
