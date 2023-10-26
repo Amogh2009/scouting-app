@@ -8,16 +8,33 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    int highgoalcubesauton;
+    int highgoalconesteliop;
+    int middlehgoalcubesauton;
+    int middlegoalconesteliop;
+    int lowgoalcubesauton;
+    int lowgoalconesteliop;
+    String titles = "name, match# team#, red/blue";
+    String auton_pickup = "#ground pickup(auton), #1st pickup(auton),#2nd pickup(auton)";
+    String auton_coneplacement = "cones scored in high(auton), cones scored in middle(auton), cones scored in low(auton)";
+    String auton_cubeplacement = "cubes scored in high(auton), cubes scored in middle(auton), cubes scored in low(auton)";
+    String auton_fails = "cone fails(auton), cube fails(auton)";
+    String teliop_pickup = "#ground pickup(auton), #1st pickup(auton),#2nd pickup(auton)";
+    String teliop_coneplacement = "cones scored in high(auton), cones scored in middle(auton), cones scored in low(auton)";
+    String teliop_cubeplacement = "cubes scored in high(auton), cubes scored in middle(auton), cubes scored in low(auton)";
+    String teliop_fails = "cone fails(teliop), cube fails(teliop)";
+    String quantitative = auton_pickup + auton_coneplacement+auton_cubeplacement+teliop_pickup+teliop_coneplacement+teliop_cubeplacement+auton_fails+teliop_fails;
+
+    String observational = "Time taken to balance, successful balance, strength, speed, maneuvering";
+        String data_sent_to_sheet = titles + quantitative + observational;
+
     TextView num_of_cubes_auton, num_of_cones_auton, num_of_cubes_teliop, num_of_cones_teliop;
     TextView num_of_links_auton, num_of_links_teliop;
     MaterialButton first_pickup_auton, second_pickup_auton, ground_pickup_auton, first_pickup_teliop, second_pickup_teliop, ground_pickup_teliop;
     MaterialButton cone_auton, cube_auton, highgoal_auton, middlegoal_auton, lowgoal_auton, cone_teliop, cube_teliop, highgoal_teliop, middlegoal_teliop, lowgoal_teliop;
     MaterialButton fail_auton, score_auton, undo_auton, fail_teliop, score_teliop, undo_teliop;
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
-    int numofconesauton = 1;
-    int numofcubessauton = 1;
-    int numofconesteliop = 1;
-    int numofcubesstelop = 1;
+
 
 
     @Override
@@ -67,7 +84,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         MaterialButton button = (MaterialButton) view;
         String buttonText = button.getText().toString();
+        //pickup location
+        switch (view.getId()){
+            case 1: /*ground pickup auton*/
 
+                break;
+            case 2: /*1st pickup auton*/
+
+                break;
+            case 3: /*2nd pickup auton*/
+
+                break;
+            case 4: /*ground pickup teliop*/
+
+                break;
+            case 5: /*1st pickup teliop*/
+
+                break;
+            case 6: /*2nd pickup teliop*/
+
+                break;
+        }
+        //cone placement location
+        switch (view.getId()){
+            case 1: /*high cone auton*/
+
+                break;
+            case 2: /*middle cone auton*/
+
+                break;
+            case 3: /*low cone auton*/
+
+                break;
+            case 4: /*high cone teliop*/
+
+                break;
+            case 5: /*middle cone teliop*/
+
+                break;
+            case 6: /*low cone teliop*/
+
+                break;
+        }
+        //cube placement location
+        switch (view.getId()){
+            case 1: /*high cube auton*/
+
+                break;
+            case 2: /*middle cube auton*/
+
+                break;
+            case 3: /*low cube auton*/
+
+                break;
+            case 4: /*high cube teliop*/
+
+                break;
+            case 5: /*middle cube teliop*/
+
+                break;
+            case 6: /*low cube teliop*/
+
+                break;
+        }
+        //score, fail, undo
+        switch (view.getId()){
+            case 1: /*fail auton*/
+
+                break;
+            case 2: /*score auton*/
+
+                break;
+            case 3: /*undo auton*/
+
+                break;
+            case 4: /*fail teliop*/
+
+                break;
+            case 5: /*score teliop*/
+
+                break;
+            case 6: /*undo teliop*/
+
+                break;
+        }
         num_of_links_auton.setText("1");
     }
 }
