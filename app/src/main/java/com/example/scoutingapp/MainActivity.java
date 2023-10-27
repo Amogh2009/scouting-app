@@ -29,6 +29,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
+    int ground_pickup_autonv;
+    int first_pickup_autonv;
+    int second_pickup_autonv;
+    int ground_pickup_teliopv;
+    int first_pickup_teliopv;
+    int second_pickup_teliopv;
+    boolean cube_autonv;
+    boolean cube_teliopv;
+    int high_cone_autonv;
+    int middle_cone_autonv;
+    int low_cone_autonv;
+    int high_cone_teliopv;
+    int middle_cone_teliopv;
+    int low_cone_teliopv;
+    int high_cube_autonv;
+    int middle_cube_autonv;
+    int low_cube_autonv;
+    int high_cube_teliopv;
+    int middle_cube_teliopv;
+    int low_cube_teliopv;
+    int fail_autonv;
+    int score_autonv;
+    int undo_autonv;
+    int fail_teliopv;
+    int score_cube_teliopv;
+    int undo_teliopv;
+
     String titles = "name, match# team#, red/blue";
     String auton_pickup = "#ground pickup(auton), #1st pickup(auton),#2nd pickup(auton)";
     String auton_coneplacement = "cones scored in high(auton), cones scored in middle(auton), cones scored in low(auton)";
@@ -214,104 +241,89 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //pickup location
         switch (view.getId()){
             case 1000022: /*ground pickup auton*/
-
+                ground_pickup_autonv++;
                 break;
             case 1000006: /*1st pickup auton*/
-
+                first_pickup_autonv++;
                 break;
             case 1000017: /*2nd pickup auton*/
-
+                second_pickup_autonv++;
                 break;
             case 1000024: /*ground pickup teliop*/
-
+                ground_pickup_teliopv++;
                 break;
             case 1000036: /*1st pickup teliop*/
-
+                first_pickup_teliopv++;
                 break;
             case 1000005: /*2nd pickup teliop*/
-
+                second_pickup_teliopv++;
                 break;
         }
         //cone or cube
         switch (view.getId()){
             case 1000032: /*cube_auton*/
-
+                cube_autonv = true;
                 break;
             case 1000008: /*cone_auton*/
-
+                cube_autonv = false;
                 break;
             case 1000034: /*cube_teliop*/
-
+                cube_teliopv = true;
                 break;
             case 1000000: /*cone_,teliop*/
-
+                cube_teliopv = false;
                 break;
 
         }
-        //cone placement location
+        //cone/cube placement location
         switch (view.getId()){
-            case 1: /*high cone auton*/
 
+            case 1000013: /*high auton*/
+                if(!cube_autonv)high_cone_autonv++;
+                else if(cube_autonv)high_cube_autonv++;
                 break;
-            case 2: /*middle cone auton*/
-
+            case 1000019: /*middle auton*/
+                if(!cube_autonv)middle_cone_autonv++;
+                else if(cube_autonv)middle_cube_autonv++;
                 break;
-            case 3: /*low cone auton*/
-
+            case 1000035: /*low auton*/
+                if(!cube_autonv)low_cone_autonv++;
+                else if(cube_autonv)low_cube_autonv++;
                 break;
-            case 4: /*high cone teliop*/
-
+            case 1000032: /*high teliop*/
+                if(!cube_teliopv)high_cone_teliopv++;
+                else if(cube_teliopv)high_cube_teliopv++;
                 break;
-            case 5: /*middle cone teliop*/
-
+            case 1000007: /*middle teliop*/
+                if(!cube_teliopv)middle_cone_teliopv++;
+                else if(cube_teliopv)middle_cube_teliopv++;
                 break;
-            case 6: /*low cone teliop*/
-
-                break;
-        }
-        //cube placement location
-        switch (view.getId()){
-            case 1: /*high cube auton*/
-
-                break;
-            case 2: /*middle cube auton*/
-
-                break;
-            case 3: /*low cube auton*/
-
-                break;
-            case 4: /*high cube teliop*/
-
-                break;
-            case 5: /*middle cube teliop*/
-
-                break;
-            case 6: /*low cube teliop*/
-
+            case 1000004: /*low teliop*/
+                if(!cube_autonv)low_cone_teliopv++;
+                else if(cube_autonv)low_cube_teliopv++;
                 break;
         }
         //score, fail, undo
         switch (view.getId()){
-            case 1: /*fail auton*/
+            case 1000026: /*fail auton*/
 
                 break;
-            case 2: /*score auton*/
+            case 1000020: /*score auton*/
 
                 break;
-            case 3: /*undo auton*/
+            case 1000029: /*undo auton*/
 
                 break;
-            case 4: /*fail teliop*/
+            case 1000038: /*fail teliop*/
 
                 break;
-            case 5: /*score teliop*/
+            case 1000011: /*score teliop*/
 
                 break;
-            case 6: /*undo teliop*/
+            case 1000015: /*undo teliop*/
 
                 break;
         }
         num_of_links_auton.setText("1");
     }
-    
 }

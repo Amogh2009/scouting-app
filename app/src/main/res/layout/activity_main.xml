@@ -670,10 +670,12 @@
 
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/succesful_balance"
             android:gravity="center"
             android:text="Yes"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/unsuccesful_balance"
             android:gravity="center"
             android:text="No"/>
 
@@ -704,22 +706,27 @@
             />
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/strength_1"
             android:gravity="center"
             android:text="1"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/strength_2"
             android:gravity="center"
             android:text="2"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/strength_3"
             android:gravity="center"
             android:text="3"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/strength_4"
             android:gravity="center"
             android:text="4"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/strength_5"
             android:gravity="center"
             android:text="5"/>
 
@@ -737,22 +744,27 @@
             />
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/speed_1"
             android:gravity="center"
             android:text="1"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/speed_2"
             android:gravity="center"
             android:text="2"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/speed_3"
             android:gravity="center"
             android:text="3"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/speed_4"
             android:gravity="center"
             android:text="4"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/speed_5"
             android:gravity="center"
             android:text="5"/>
 
@@ -770,22 +782,27 @@
             />
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/maneuvering_1"
             android:gravity="center"
             android:text="1"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/maneuvering_2"
             android:gravity="center"
             android:text="2"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/maneuvering_3"
             android:gravity="center"
             android:text="3"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/maneuvering_4"
             android:gravity="center"
             android:text="4"/>
         <Button
             style="@style/buttonNumber"
+            android:id="@+id/maneuvering_5"
             android:gravity="center"
             android:text="5"/>
 
