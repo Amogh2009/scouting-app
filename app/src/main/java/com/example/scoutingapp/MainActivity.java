@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText inputTextTeam;
     private static final long START_TIME_IN_MILLIS = 600000;
     private TextView mTextViewCountDown;
-    private MaterialButton mButtonStartPause;
-    private MaterialButton mButtonReset;
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -80,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton fail_auton, score_auton, undo_auton, fail_teliop, score_teliop, undo_teliop;
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
     MaterialButton submit;
+
+    MaterialButton mButtonStartPause, mButtonReset;
     /*
     int numofconesauton = 1;
     int numofcubessauton = 1;
@@ -136,8 +136,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(minus_link_teliop, R.id.minus_link_teliop);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
-        mButtonStartPause = findViewById(R.id.button_start_pause);
-        mButtonReset = findViewById(R.id.button_reset);
+        assignId(mButtonStartPause, R.id.button_start_pause);
+        assignId(mButtonReset, R.id.button_reset);
         // code below for submitting data to google sheet
         assignId(submit, R.id.submit);
 
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 if (mTimerRunning) {
                     pauseTimer();
                 } else {
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonReset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 resetTimer();
             }
         });
