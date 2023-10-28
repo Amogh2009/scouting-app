@@ -39,12 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int team_number;
     //variables for shaurya above
 
-    int ground_pickup_autonv;
+    /*int ground_pickup_autonv;
     int first_pickup_autonv;
-    int second_pickup_autonv;
-    int ground_pickup_teliopv;
+    int second_pickup_autonv;*/
+    String pickup_location_auton="";
+    /*int ground_pickup_teliopv;
     int first_pickup_teliopv;
-    int second_pickup_teliopv;
+    int second_pickup_teliopv;*/
+    String pickup_location_teliop="";
     boolean cube_autonv;
     boolean cube_teliopv;
     boolean cone_autonv;
@@ -193,7 +195,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int matchnumber = 76;
                 int teamnumber = 7390;
 
-                saveData(name, matchnumber, teamnumber);
+                saveData(name, matchnumber, teamnumber, alliance_color, pickup_location_auton, pickup_location_teliop,
+                        high_cube_teliopv, middle_cube_teliopv, low_cube_teliopv, high_cone_teliopv, middle_cone_teliopv,
+                        low_cone_teliopv, high_cube_autonv, middle_cube_autonv, low_cube_autonv, high_cone_autonv, middle_cone_autonv,
+                        low_cone_autonv, fail_teliopv, fail_autonv, num_of_links_teliopv, num_of_links_autonv, balance, robot_strengthv,
+                        robot_speedv, robot_maneuvarablev);
             }
         });
 
@@ -218,9 +224,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         updateCountDownText();
     }
-    private void saveData(String name, int matchnumber, int teamnumber) {
+    private void saveData(String name, int matchnumber, int teamnumber,
+                         String alliance_color,  String pickup_location_auton,
+                          String pickup_location_teleop, int cubes_high, int cubes_mid, int cubes_low,
+                          int cones_high, int cones_mid, int cones_low, int cubes_high_auton,
+                          int cubes_mid_auton, int cubes_low_auton, int cones_high_auton, int cones_mid_auton,
+                          int cones_low_auton, int failure, int failure_auton, int links, int links_auton,
+                          String succesful_balance, int strength, int speed, int maneuvering) {
         String url = "https://script.google.com/macros/s/AKfycbzwr9CcQPnwj84vYsYY63ilWmazQ4v6qWwSJHU5ssWqZf6X89Su1C1wB-2hn3dUTKg/exec";
         url = url+"action=create&name="+name+"&matchnumber="+matchnumber+"&teamnumber="+teamnumber;
+        url = url+"&color="+alliance_color+"&pickuplocationauton="+pickup_location_auton+"&pickuplocationteleop="+pickup_location_teleop;
+        url = url+"&cubeshigh="+cubes_high+"&cubesmid="+cubes_mid+"&cubeslow="+cubes_low+"&coneshigh="+cones_high;
+        url = url+"&conesmid="+cones_mid+"&coneslow="+cones_low+"&cubeshighauton="+cubes_high_auton+"&cubesmidauton="+cubes_mid_auton;
+        url = url+"&cubeslowauton="+cubes_low_auton+"&coneshighauton="+cones_high_auton+"&conesmidauton="+cones_mid_auton;
+        url = url+"&coneslowauton="+cones_low_auton+"&failure="+failure+"&failureauton="+failure_auton+"&links="+links;
+        url = url+"&linksauton="+links_auton+"&succesfulbalance="+succesful_balance+"&strength="+strength+"&speed="+speed;
+        url = url+"&maneuvering="+maneuvering;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -373,9 +392,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fail_autonv++;
                 break;
             case 1000020: /*score auton*/
-                if(first_pickup_auton.isChecked())first_pickup_autonv++;
-                if(second_pickup_auton.isChecked())second_pickup_autonv++;
-                if(ground_pickup_auton.isChecked())ground_pickup_autonv++;
+                if(first_pickup_auton.isChecked())pickup_location_auton="first";
+                if(second_pickup_auton.isChecked())pickup_location_auton="second";
+                if(ground_pickup_auton.isChecked())pickup_location_auton="ground";
                 if(cone_auton.isChecked())cone_autonv = true;
                 if(cube_auton.isChecked())cube_autonv = true;
                 if(highgoal_auton.isChecked()){
@@ -413,9 +432,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fail_teliopv++;
                 break;
             case 1000011: /*score teliop*/
-                if(first_pickup_teliop.isChecked())first_pickup_teliopv++;
-                if(second_pickup_teliop.isChecked())second_pickup_teliopv++;
-                if(ground_pickup_teliop.isChecked())ground_pickup_teliopv++;
+                if(first_pickup_teliop.isChecked())pickup_location_teliop="first";
+                if(second_pickup_teliop.isChecked())pickup_location_teliop="second";
+                if(ground_pickup_teliop.isChecked())pickup_location_teliop="ground";
                 if(cone_teliop.isChecked())cone_teliopv = true;
                 if(cube_teliop.isChecked())cube_teliopv = true;
                 if(highgoal_teliop.isChecked()){

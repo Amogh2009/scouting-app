@@ -832,7 +832,7 @@
     <LinearLayout
         style="@style/buttonRow">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/submit"
             style="@style/buttonNumber"
             android:layout_width="30dp"
