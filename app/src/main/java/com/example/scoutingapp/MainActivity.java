@@ -179,10 +179,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(maneuvering_5, R.id.maneuvering_5);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
-        assignId(mButtonStartPause, R.id.button_start_pause);
-        assignId(mButtonReset, R.id.button_reset);
+
+        mButtonStartPause = (MaterialButton) findViewById(R.id.button_start_pause);
+        mButtonReset = (MaterialButton) findViewById(R.id.button_reset);
+        submit = (MaterialButton) findViewById(R.id.submit);
+
         // code below for submitting data to google sheet
-        assignId(submit, R.id.submit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
