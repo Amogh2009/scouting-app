@@ -5,4 +5,6 @@
     <color name="almostBlack">#222</color>
     <color name="orange">#FF8c00</color>
     <color name="lightgreen">#c3eb34</color>
+    <color name="teal">#00D6AB</color>
+    <color name="blue">#008EFF</color>
 </resources>

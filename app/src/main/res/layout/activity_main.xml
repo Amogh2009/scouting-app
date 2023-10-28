@@ -174,7 +174,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#FF5722"
                     android:textOff="1st"
-                    android:textOn="1st"
+                    android:textOn="slt"
                     android:textSize="10sp" />
 
                 <ToggleButton
@@ -185,7 +185,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#FF5722"
                     android:textOff="2nd"
-                    android:textOn="2nd"
+                    android:textOn="slt"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -197,7 +197,7 @@
                     android:id="@+id/ground_pickup_auton"
                     android:textColor="@color/white"
                     android:textOff="ground"
-                    android:textOn="ground"
+                    android:textOn="slt"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="58dp"
@@ -268,7 +268,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="high"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                     <ToggleButton
@@ -279,7 +279,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="mid"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                     <ToggleButton
@@ -290,7 +290,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="low"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                 </LinearLayout>
@@ -425,7 +425,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#FF5722"
                     android:textOff="1st"
-                    android:textOn="1st"
+                    android:textOn="slt"
                     android:textSize="10sp" />
 
                 <ToggleButton
@@ -436,7 +436,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#FF5722"
                     android:textOff="2nd"
-                    android:textOn="2nd"
+                    android:textOn="slt"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -448,7 +448,7 @@
                     android:id="@+id/ground_pickup_teliop"
                     android:textColor="@color/white"
                     android:textOff="ground"
-                    android:textOn="ground"
+                    android:textOn="slt"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="58dp"
@@ -518,7 +518,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="high"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                     <ToggleButton
@@ -529,7 +529,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="mid"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                     <ToggleButton
@@ -540,7 +540,7 @@
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
                         android:backgroundTint="#00D6AB"
-                        android:textOn="low"
+                        android:textOn="slt"
                         android:textSize="20dp" />
 
                 </LinearLayout>

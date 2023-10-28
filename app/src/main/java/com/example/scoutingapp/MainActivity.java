@@ -380,7 +380,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     */
         //score, fail, undo
         switch (view.getId()){
-            case 1000026: /*fail auton*/
+            case 1000048: /*fail auton*/
                 first_pickup_auton.setChecked(false);
                 second_pickup_auton.setChecked(false);
                 ground_pickup_auton.setChecked(false);
@@ -391,10 +391,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 lowgoal_auton.setChecked(false);
                 fail_autonv++;
                 break;
+<<<<<<< Updated upstream
             case 1000020: /*score auton*/
                 if(first_pickup_auton.isChecked())pickup_location_auton="first";
                 if(second_pickup_auton.isChecked())pickup_location_auton="second";
                 if(ground_pickup_auton.isChecked())pickup_location_auton="ground";
+||||||| Stash base
+            case 1000020: /*score auton*/
+                if(first_pickup_auton.isChecked())first_pickup_autonv++;
+                if(second_pickup_auton.isChecked())second_pickup_autonv++;
+                if(ground_pickup_auton.isChecked())ground_pickup_autonv++;
+=======
+            case 1000019: /*score auton*/
+                if(first_pickup_auton.isChecked())first_pickup_autonv++;
+                if(second_pickup_auton.isChecked())second_pickup_autonv++;
+                if(ground_pickup_auton.isChecked())ground_pickup_autonv++;
+>>>>>>> Stashed changes
                 if(cone_auton.isChecked())cone_autonv = true;
                 if(cube_auton.isChecked())cube_autonv = true;
                 if(highgoal_auton.isChecked()){
@@ -406,11 +418,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     else if(cube_autonv)middle_cube_autonv++;
                 }
                 if(lowgoal_auton.isChecked()) {
-                    if(!cube_autonv)low_cone_autonv++;
-                    else if(cube_autonv)low_cube_autonv++;
+                    if (!cube_autonv) low_cone_autonv++;
+                    else if (cube_autonv) low_cube_autonv++;
+
                 }
+                    first_pickup_auton.setChecked(false);
+                    second_pickup_auton.setChecked(false);
+                    ground_pickup_auton.setChecked(false);
+                    cone_auton.setChecked(false);
+                    cube_auton.setChecked(false);
+                    highgoal_auton.setChecked(false);
+                    middlegoal_auton.setChecked(false);
+                    lowgoal_auton.setChecked(false);
                 break;
-            case 1000029: /*undo auton*/
+            case 1000050: /*undo auton*/
                 first_pickup_auton.setChecked(false);
                 second_pickup_auton.setChecked(false);
                 ground_pickup_auton.setChecked(false);
@@ -420,7 +441,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 middlegoal_auton.setChecked(false);
                 lowgoal_auton.setChecked(false);
                 break;
-            case 1000038: /*fail teliop*/
+            case 1000060: /*fail teliop*/
                 first_pickup_teliop.setChecked(false);
                 second_pickup_teliop.setChecked(false);
                 ground_pickup_teliop.setChecked(false);
@@ -431,10 +452,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 lowgoal_teliop.setChecked(false);
                 fail_teliopv++;
                 break;
+<<<<<<< Updated upstream
             case 1000011: /*score teliop*/
                 if(first_pickup_teliop.isChecked())pickup_location_teliop="first";
                 if(second_pickup_teliop.isChecked())pickup_location_teliop="second";
                 if(ground_pickup_teliop.isChecked())pickup_location_teliop="ground";
+||||||| Stash base
+            case 1000011: /*score teliop*/
+                if(first_pickup_teliop.isChecked())first_pickup_teliopv++;
+                if(second_pickup_teliop.isChecked())second_pickup_teliopv++;
+                if(ground_pickup_teliop.isChecked())ground_pickup_teliopv++;
+=======
+            case 1000038: /*score teliop*/
+                if(first_pickup_teliop.isChecked())first_pickup_teliopv++;
+                if(second_pickup_teliop.isChecked())second_pickup_teliopv++;
+                if(ground_pickup_teliop.isChecked())ground_pickup_teliopv++;
+>>>>>>> Stashed changes
                 if(cone_teliop.isChecked())cone_teliopv = true;
                 if(cube_teliop.isChecked())cube_teliopv = true;
                 if(highgoal_teliop.isChecked()){
@@ -449,8 +482,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if(!cube_autonv)low_cone_teliopv++;
                     else if(cube_autonv)low_cube_teliopv++;
                 }
+                first_pickup_teliop.setChecked(false);
+                second_pickup_teliop.setChecked(false);
+                ground_pickup_teliop.setChecked(false);
+                cone_teliop.setChecked(false);
+                cube_teliop.setChecked(false);
+                highgoal_teliop.setChecked(false);
+                middlegoal_teliop.setChecked(false);
+                lowgoal_teliop.setChecked(false);
                 break;
-            case 1000015: /*undo teliop*/
+            case 1000044: /*undo teliop*/
                 first_pickup_teliop.setChecked(false);
                 second_pickup_teliop.setChecked(false);
                 ground_pickup_teliop.setChecked(false);
