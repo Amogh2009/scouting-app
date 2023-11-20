@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -179,11 +179,11 @@
 
                 <ToggleButton
                     android:id="@+id/second_pickup_auton"
-                    android:textColor="@color/white"
                     android:layout_width="61dp"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:backgroundTint="#FF5722"
+                    android:textColor="@color/white"
                     android:textOff="2nd"
                     android:textOn="slt"
                     android:textSize="10sp" />
