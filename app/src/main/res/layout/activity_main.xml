@@ -172,7 +172,6 @@
                     android:layout_width="61dp"
                     android:layout_height="50dp"
                     android:layout_margin="3dp"
-                    android:backgroundTint="#FF5722"
                     android:background="@drawable/toggle_color"
                     android:textOff="1st"
                     android:textOn="slt"
@@ -183,7 +182,7 @@
                     android:layout_width="61dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:backgroundTint="#FF5722"
+                    android:background="@drawable/toggle_color"
                     android:textColor="@color/white"
                     android:textOff="2nd"
                     android:textOn="slt"
@@ -203,7 +202,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="58dp"
                     android:layout_marginTop="-1dp"
-                    android:backgroundTint="#FF5722"
+                    android:background="@drawable/toggle_color"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -224,7 +223,7 @@
                         android:layout_width="60dp"
                         android:layout_height="65dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#673AB7"
+                        android:background="@drawable/cube_toggle"
                         app:cornerRadius="10dp" />
                     <TextView
                         android:id="@+id/num_of_cubes_auton"
@@ -243,7 +242,7 @@
                         android:layout_height="65dp"
                         android:layout_margin="0dp"
                         app:cornerRadius="10dp"
-                        android:backgroundTint="#FFC107" />
+                        android:background="@drawable/cone_toggle" />
                     <TextView
                         android:id="@+id/num_of_cones_auton"
                         android:layout_width="40dp"
@@ -268,7 +267,7 @@
                         android:textOff="high"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
@@ -279,7 +278,7 @@
                         android:layout_width="100dp"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
@@ -290,7 +289,7 @@
                         android:layout_width="100dp"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
@@ -424,7 +423,7 @@
                     android:layout_width="61dp"
                     android:layout_height="50dp"
                     android:layout_margin="3dp"
-                    android:backgroundTint="#FF5722"
+                    android:background="@drawable/toggle_color"
                     android:textOff="1st"
                     android:textOn="slt"
                     android:textSize="10sp" />
@@ -435,7 +434,7 @@
                     android:layout_width="61dp"
                     android:layout_height="50dp"
                     android:layout_margin="3dp"
-                    android:backgroundTint="#FF5722"
+                    android:background="@drawable/toggle_color"
                     android:textOff="2nd"
                     android:textOn="slt"
                     android:textSize="10sp" />
@@ -454,7 +453,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="58dp"
                     android:layout_marginTop="-1dp"
-                    android:backgroundTint="#FF5722"
+                    android:background="@drawable/toggle_color"
                     android:textSize="10sp" />
             </LinearLayout>
 
@@ -475,7 +474,7 @@
                         android:layout_width="60dp"
                         android:layout_height="65dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#673AB7"
+                        android:background="@drawable/cube_toggle"
                         app:cornerRadius="10dp" />
                     <TextView
                         android:id="@+id/num_of_cubes_teliop"
@@ -494,7 +493,7 @@
                         android:layout_height="65dp"
                         android:layout_margin="0dp"
                         app:cornerRadius="10dp"
-                        android:backgroundTint="#FFC107" />
+                        android:background="@drawable/cone_toggle" />
                     <TextView
                         android:id="@+id/num_of_cones_teliop"
                         android:layout_width="40dp"
@@ -518,7 +517,7 @@
                         android:layout_width="100dp"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
@@ -529,7 +528,7 @@
                         android:layout_width="100dp"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
@@ -540,7 +539,7 @@
                         android:layout_width="100dp"
                         android:layout_height="55dp"
                         android:layout_margin="0dp"
-                        android:backgroundTint="#00D6AB"
+                        android:background="@drawable/toggle_color"
                         android:textOn="slt"
                         android:textSize="20dp" />
 
