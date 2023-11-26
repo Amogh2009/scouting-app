@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int robot_speedv;
     int robot_strengthv;
     int robot_maneuvarablev;
+    int numofconesauton = 0;
+    int numofcubessauton = 0;
+    int numofconesteliop = 0;
+    int numofcubesstelop = 0;
 
 /*
     String titles = "name, match# team#, red/blue";
@@ -131,12 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton maneuvering_1, maneuvering_2, maneuvering_3, maneuvering_4, maneuvering_5;
     MaterialButton submit;
     MaterialButton mButtonStartPause, mButtonReset;
-    /*
-    int numofconesauton = 1;
-    int numofcubessauton = 1;
-    int numofconesteliop = 1;
-    int numofcubesstelop = 1;
-    */
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -279,7 +277,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 cube_autonv=true;
-                cone_autonv=false;}
+                cone_autonv=false;
+                num_of_cubes_auton.setText(numofcubessauton++);
+            }
         });
         cone_auton.setOnClickListener(new View.OnClickListener() {
             @Override
