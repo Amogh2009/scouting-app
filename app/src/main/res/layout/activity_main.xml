@@ -80,7 +80,7 @@
             <EditText
                 android:layout_width="130dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="-15dp"
+                android:layout_marginLeft="-15dp"
                 android:layout_marginTop="-5dp"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -379,7 +379,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#00D6AB"
                     android:text="+"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     app:cornerRadius="32dp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -390,7 +390,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#00D6AB"
                     android:text="-"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     app:cornerRadius="32dp" />
 
             </LinearLayout>
@@ -629,7 +629,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#00D6AB"
                     android:text="+"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     app:cornerRadius="32dp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -640,7 +640,7 @@
                     android:layout_margin="3dp"
                     android:backgroundTint="#00D6AB"
                     android:text="-"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     app:cornerRadius="32dp" />
             </LinearLayout>
 

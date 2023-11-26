@@ -3,8 +3,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F00</color>
     <color name="almostBlack">#222</color>
-    <color name="orange">#FF8c00</color>
     <color name="lightgreen">#c3eb34</color>
     <color name="teal">#00D6AB</color>
     <color name="blue">#008EFF</color>
+    <color name="orange">#FF5722</color>
+    <color name="purple">#673AB7</color>
+    673AB7
 </resources>
