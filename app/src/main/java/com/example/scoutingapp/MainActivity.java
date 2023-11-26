@@ -278,7 +278,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 cube_autonv=true;
                 cone_autonv=false;
-                num_of_cubes_auton.setText(numofcubessauton++);
             }
         });
         cone_auton.setOnClickListener(new View.OnClickListener() {
