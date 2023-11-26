@@ -176,7 +176,7 @@
                     android:background="@drawable/toggle_color"
                     android:textOff="1st"
                     android:textOn="slt"
-                    android:textSize="1sp" />
+                    android:textSize="10sp" />
 
                 <ToggleButton
                     android:id="@+id/second_pickup_auton"

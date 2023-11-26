@@ -128,13 +128,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MaterialButton fail_auton, score_auton, undo_auton, fail_teliop, score_teliop, undo_teliop;
     MaterialButton add_link_auton, minus_link_auton, add_link_teliop, minus_link_teliop;
 
-    MaterialButton succesful_balance, unsuccesful_balance;
+    Button succesful_balance, unsuccesful_balance;
 
-    MaterialButton strength_1, strength_2, strength_3, strength_4, strength_5;
-    MaterialButton speed_1, speed_2, speed_3, speed_4, speed_5;
-    MaterialButton maneuvering_1, maneuvering_2, maneuvering_3, maneuvering_4, maneuvering_5;
-    MaterialButton submit;
-    MaterialButton mButtonStartPause, mButtonReset;
+    Button strength_1, strength_2, strength_3, strength_4, strength_5;
+    Button speed_1, speed_2, speed_3, speed_4, speed_5;
+    Button maneuvering_1, maneuvering_2, maneuvering_3, maneuvering_4, maneuvering_5;
+    Button submit;
+    Button mButtonStartPause, mButtonReset;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,34 +172,64 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         middlegoal_teliop = (ToggleButton) findViewById(R.id.middlegoal_teliop);
         lowgoal_teliop = (ToggleButton) findViewById(R.id.lowgoal_teliop);
 
-        assignId(fail_auton, R.id.fail_auton);
-        assignId(score_auton, R.id.score_auton);
-        assignId(undo_auton, R.id.undo_auton);
-        assignId(fail_teliop, R.id.fail_teliop);
-        assignId(score_teliop, R.id.score_teliop);
-        assignId(undo_teliop, R.id.undo_teliop);
-        assignId(add_link_auton, R.id.add_link_auton);
-        assignId(minus_link_auton, R.id.minus_link_auton);
-        assignId(add_link_teliop, R.id.add_link_teliop);
-        assignId(minus_link_teliop, R.id.minus_link_teliop);
+        fail_auton = (MaterialButton) findViewById(R.id.fail_auton);
+        score_auton = (MaterialButton) findViewById(R.id.score_auton);
+        undo_auton = (MaterialButton) findViewById(R.id.undo_auton);
+        fail_teliop = (MaterialButton) findViewById(R.id.fail_teliop);
+        score_teliop = (MaterialButton) findViewById(R.id.score_teliop);
+        undo_teliop = (MaterialButton) findViewById(R.id.undo_teliop);
+        add_link_auton = (MaterialButton) findViewById(R.id.add_link_auton);
+        minus_link_auton = (MaterialButton) findViewById(R.id.minus_link_auton);
+        add_link_teliop = (MaterialButton) findViewById(R.id.add_link_teliop);
+        minus_link_teliop = (MaterialButton) findViewById(R.id.minus_link_teliop);
 
-        assignId(succesful_balance, R.id.succesful_balance);
-        assignId(unsuccesful_balance, R.id.unsuccesful_balance);
-        assignId(strength_1, R.id.strength_1);
-        assignId(strength_2, R.id.strength_2);
-        assignId(strength_3, R.id.strength_3);
-        assignId(strength_4, R.id.strength_4);
-        assignId(strength_5, R.id.strength_5);
-        assignId(speed_1, R.id.speed_1);
-        assignId(speed_2, R.id.speed_2);
-        assignId(speed_3, R.id.speed_3);
-        assignId(speed_4, R.id.speed_4);
-        assignId(speed_5, R.id.speed_5);
-        assignId(maneuvering_1, R.id.maneuvering_1);
-        assignId(maneuvering_2, R.id.maneuvering_2);
-        assignId(maneuvering_3, R.id.maneuvering_3);
-        assignId(maneuvering_4, R.id.maneuvering_4);
-        assignId(maneuvering_5, R.id.maneuvering_5);
+//        assignId(fail_auton, R.id.fail_auton);
+//        assignId(score_auton, R.id.score_auton);
+//        assignId(undo_auton, R.id.undo_auton);
+//        assignId(fail_teliop, R.id.fail_teliop);
+//        assignId(score_teliop, R.id.score_teliop);
+//        assignId(undo_teliop, R.id.undo_teliop);
+//        assignId(add_link_auton, R.id.add_link_auton);
+//        assignId(minus_link_auton, R.id.minus_link_auton);
+//        assignId(add_link_teliop, R.id.add_link_teliop);
+//        assignId(minus_link_teliop, R.id.minus_link_teliop);
+
+        succesful_balance = (Button) findViewById(R.id.succesful_balance);
+        unsuccesful_balance = (Button) findViewById(R.id.unsuccesful_balance);
+        strength_1 = (Button) findViewById(R.id.strength_1);
+        strength_2 = (Button) findViewById(R.id.strength_2);
+        strength_3 = (Button) findViewById(R.id.strength_3);
+        strength_4 = (Button) findViewById(R.id.strength_4);
+        strength_5 = (Button) findViewById(R.id.strength_5);
+        speed_1 = (Button) findViewById(R.id.speed_1);
+        speed_2 = (Button) findViewById(R.id.speed_2);
+        speed_3 = (Button) findViewById(R.id.speed_3);
+        speed_4 = (Button) findViewById(R.id.speed_4);
+        speed_5 = (Button) findViewById(R.id.speed_5);
+        maneuvering_1 = (Button) findViewById(R.id.maneuvering_1);
+        maneuvering_2 = (Button) findViewById(R.id.maneuvering_2);
+        maneuvering_3 = (Button) findViewById(R.id.maneuvering_3);
+        maneuvering_4 = (Button) findViewById(R.id.maneuvering_4);
+        maneuvering_5 = (Button) findViewById(R.id.maneuvering_5);
+
+
+//        assignId(succesful_balance, R.id.succesful_balance);
+//        assignId(unsuccesful_balance, R.id.unsuccesful_balance);
+//        assignId(strength_1, R.id.strength_1);
+//        assignId(strength_2, R.id.strength_2);
+//        assignId(strength_3, R.id.strength_3);
+//        assignId(strength_4, R.id.strength_4);
+//        assignId(strength_5, R.id.strength_5);
+//        assignId(speed_1, R.id.speed_1);
+//        assignId(speed_2, R.id.speed_2);
+//        assignId(speed_3, R.id.speed_3);
+//        assignId(speed_4, R.id.speed_4);
+//        assignId(speed_5, R.id.speed_5);
+//        assignId(maneuvering_1, R.id.maneuvering_1);
+//        assignId(maneuvering_2, R.id.maneuvering_2);
+//        assignId(maneuvering_3, R.id.maneuvering_3);
+//        assignId(maneuvering_4, R.id.maneuvering_4);
+//        assignId(maneuvering_5, R.id.maneuvering_5);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
 
